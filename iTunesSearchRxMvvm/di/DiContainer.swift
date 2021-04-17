@@ -21,7 +21,7 @@ class DiContainer {
 extension DiContainer {
     private func setupViewController() {
         self.container.register(SplashViewController.self) { _ in
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            let storyboard = UIStoryboard(name: "Splash", bundle: .main)
             return storyboard.instantiateInitialViewController() as! SplashViewController
         }
     }
