@@ -7,5 +7,6 @@ target 'iTunesSearchRxMvvm' do
 
   # Pods for iTunesSearchRxMvvm
   pod 'RxCocoa'
+  pod 'Then'
 
 end
