@@ -27,9 +27,11 @@ extension DiContainer {
                 $0.viewModel = r.resolve(SplashViewModel.self)
             }
         }
-        self.container.register(SearchViewController.self) { _ in
+        self.container.register(SearchViewController.self) { r in
             let storyboard = UIStoryboard(name: "Search", bundle: .main)
-            return storyboard.instantiateInitialViewController() as! SearchViewController
+            return (storyboard.instantiateInitialViewController() as! SearchViewController).then {
+                $0.viewModel = r.resolve(SearchViewModel.self)
+            }
         }
     }
 }
@@ -39,6 +41,9 @@ extension DiContainer {
     private func setupViewModel() {
         self.container.register(SplashViewModel.self) { _ in
             SplashViewModel()
+        }
+        self.container.register(SearchViewModel.self) { _ in
+            SearchViewModel()
         }
     }
 }
