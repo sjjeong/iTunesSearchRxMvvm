@@ -15,6 +15,8 @@
 		EEE36038262AD50A00FFA0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE36037262AD50A00FFA0AC /* Assets.xcassets */; };
 		EEE3603B262AD50A00FFA0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE36039262AD50A00FFA0AC /* LaunchScreen.storyboard */; };
 		EEE36060262AEA6200FFA0AC /* DiContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE3605F262AEA6200FFA0AC /* DiContainer.swift */; };
+		EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE36080262AF37200FFA0AC /* SearchViewController.swift */; };
+		EEE36084262F196100FFA0AC /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE36083262F196000FFA0AC /* Search.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		EEE3603A262AD50A00FFA0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEE3603C262AD50A00FFA0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE3605F262AEA6200FFA0AC /* DiContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiContainer.swift; sourceTree = "<group>"; };
+		EEE36080262AF37200FFA0AC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EEE36083262F196000FFA0AC /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		EEE36071262AF26400FFA0AC /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				EEE3607F262AF36A00FFA0AC /* search */,
 				EEE36072262AF26900FFA0AC /* splash */,
 			);
 			path = ui;
@@ -132,6 +137,15 @@
 				EEE36037262AD50A00FFA0AC /* Assets.xcassets */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		EEE3607F262AF36A00FFA0AC /* search */ = {
+			isa = PBXGroup;
+			children = (
+				EEE36080262AF37200FFA0AC /* SearchViewController.swift */,
+				EEE36083262F196000FFA0AC /* Search.storyboard */,
+			);
+			path = search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,7 @@
 			files = (
 				EEE3603B262AD50A00FFA0AC /* LaunchScreen.storyboard in Resources */,
 				EEE36038262AD50A00FFA0AC /* Assets.xcassets in Resources */,
+				EEE36084262F196100FFA0AC /* Search.storyboard in Resources */,
 				EEE36036262AD50800FFA0AC /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
 				EEE36033262AD50700FFA0AC /* SplashViewController.swift in Sources */,
 				EEE3602F262AD50700FFA0AC /* AppDelegate.swift in Sources */,
 				EEE36060262AEA6200FFA0AC /* DiContainer.swift in Sources */,

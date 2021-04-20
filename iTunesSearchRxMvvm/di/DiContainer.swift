@@ -24,5 +24,9 @@ extension DiContainer {
             let storyboard = UIStoryboard(name: "Splash", bundle: .main)
             return storyboard.instantiateInitialViewController() as! SplashViewController
         }
+        self.container.register(SearchViewController.self) { _ in
+            let storyboard = UIStoryboard(name: "Search", bundle: .main)
+            return storyboard.instantiateInitialViewController() as! SearchViewController
+        }
     }
 }
