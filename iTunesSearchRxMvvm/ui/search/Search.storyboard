@@ -14,9 +14,23 @@
                     <view key="view" contentMode="scaleToFill" id="muJ-6z-efC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="4SX-tQ-Gte">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HoX-cu-Hsz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4SX-tQ-Gte" secondAttribute="trailing" id="d4n-Ng-XWZ"/>
+                            <constraint firstItem="4SX-tQ-Gte" firstAttribute="top" secondItem="HoX-cu-Hsz" secondAttribute="top" id="dJA-Q8-ug8"/>
+                            <constraint firstItem="4SX-tQ-Gte" firstAttribute="leading" secondItem="HoX-cu-Hsz" secondAttribute="leading" id="esP-lb-Bf8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="4SX-tQ-Gte" id="08l-qJ-jPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q9-vx-gSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
