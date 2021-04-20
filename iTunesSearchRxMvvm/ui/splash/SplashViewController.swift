@@ -9,16 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SplashViewController: UIViewController {
-
-    private let disposeBag: DisposeBag = .init()
+class SplashViewController: BaseViewController<SplashViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Observable<Int>.timer(.milliseconds(1500), scheduler: ConcurrentDispatchQueueScheduler.init(qos: .background))
-            .take(1)
+        viewModel.showSearchView
             .observe(on: MainScheduler.instance)
-            .subscribe(onCompleted: {
+            .subscribe(onNext: { _ in
                 self.presentSearchViewController()
             })
             .disposed(by: disposeBag)
@@ -28,7 +25,6 @@ class SplashViewController: UIViewController {
         let vc = DiContainer.instance.container.resolve(SearchViewController.self)!
         self.view.window?.rootViewController = vc
     }
-
 
 }
 
