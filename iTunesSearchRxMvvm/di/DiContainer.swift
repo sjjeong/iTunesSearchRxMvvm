@@ -15,6 +15,7 @@ class DiContainer {
     private init() {
         self.setupViewController()
         self.setupViewModel()
+        self.setupNetwork()
     }
 }
 
@@ -44,6 +45,15 @@ extension DiContainer {
         }
         self.container.register(SearchViewModel.self) { _ in
             SearchViewModel()
+        }
+    }
+}
+
+// Network
+extension DiContainer {
+    private func setupNetwork() {
+        self.container.register(ApiServiceType.self) { _ in
+            ApiService()
         }
     }
 }

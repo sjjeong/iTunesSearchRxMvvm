@@ -23,6 +23,8 @@
 		EEE36094262F277000FFA0AC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE36093262F277000FFA0AC /* SearchViewModel.swift */; };
 		EEE360D9263040AE00FFA0AC /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360D8263040AE00FFA0AC /* SearchResponse.swift */; };
 		EEE360DE263040C800FFA0AC /* SearchInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360DD263040C800FFA0AC /* SearchInfoResponse.swift */; };
+		EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360E22630422300FFA0AC /* ApiServiceType.swift */; };
+		EEE360E62630425A00FFA0AC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360E52630425A00FFA0AC /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		EEE36093262F277000FFA0AC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EEE360D8263040AE00FFA0AC /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		EEE360DD263040C800FFA0AC /* SearchInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoResponse.swift; sourceTree = "<group>"; };
+		EEE360E22630422300FFA0AC /* ApiServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceType.swift; sourceTree = "<group>"; };
+		EEE360E52630425A00FFA0AC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				EEE360D7263040A500FFA0AC /* model */,
+				EEE360E22630422300FFA0AC /* ApiServiceType.swift */,
+				EEE360E52630425A00FFA0AC /* ApiService.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -305,12 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */,
 				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
 				EEE36033262AD50700FFA0AC /* SplashViewController.swift in Sources */,
 				EEE3602F262AD50700FFA0AC /* AppDelegate.swift in Sources */,
 				EEE3608B262F24D000FFA0AC /* BaseViewModel.swift in Sources */,
 				EEE360DE263040C800FFA0AC /* SearchInfoResponse.swift in Sources */,
 				EEE36060262AEA6200FFA0AC /* DiContainer.swift in Sources */,
+				EEE360E62630425A00FFA0AC /* ApiService.swift in Sources */,
 				EEE360D9263040AE00FFA0AC /* SearchResponse.swift in Sources */,
 				EEE3608F262F250E00FFA0AC /* SplashViewModel.swift in Sources */,
 				EEE36094262F277000FFA0AC /* SearchViewModel.swift in Sources */,
