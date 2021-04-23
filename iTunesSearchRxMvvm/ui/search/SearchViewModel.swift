@@ -11,14 +11,26 @@ import RxSwift
 
 class SearchViewModel: BaseViewModel {
     
+    let apiService: ApiServiceType
+    
     let query: BehaviorRelay<String> = .init(value: "")
+    
+    let searchInfoList: BehaviorRelay<[SearchInfoResponse]> = .init(value: [])
+    
+    init(apiService: ApiServiceType) {
+        self.apiService = apiService
+    }
     
     override func start() {
         query.debounce(.milliseconds(200), scheduler: ConcurrentDispatchQueueScheduler.init(qos: .background))
-            .subscribe(onNext: {
-                print($0)
-            })
-        .disposed(by: disposeBag)
+            .flatMapLatest { [weak self] str -> Observable<SearchResponse> in
+                guard let self = self else { return Observable.empty() }
+                return self.apiService.getSearchInfo(query: str)
+                    .asObservable()
+            }
+            .map { $0.results }
+            .bind(to: searchInfoList)
+            .disposed(by: disposeBag)
     }
     
 }

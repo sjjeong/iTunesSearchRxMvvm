@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,17 +20,26 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kCX-o4-0MO">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HoX-cu-Hsz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HoX-cu-Hsz" firstAttribute="bottom" secondItem="kCX-o4-0MO" secondAttribute="bottom" id="GqF-uX-UhX"/>
+                            <constraint firstItem="HoX-cu-Hsz" firstAttribute="trailing" secondItem="kCX-o4-0MO" secondAttribute="trailing" id="Sec-hJ-fsR"/>
                             <constraint firstAttribute="trailing" secondItem="4SX-tQ-Gte" secondAttribute="trailing" id="d4n-Ng-XWZ"/>
                             <constraint firstItem="4SX-tQ-Gte" firstAttribute="top" secondItem="HoX-cu-Hsz" secondAttribute="top" id="dJA-Q8-ug8"/>
                             <constraint firstItem="4SX-tQ-Gte" firstAttribute="leading" secondItem="HoX-cu-Hsz" secondAttribute="leading" id="esP-lb-Bf8"/>
+                            <constraint firstItem="kCX-o4-0MO" firstAttribute="top" secondItem="4SX-tQ-Gte" secondAttribute="bottom" id="kd4-zs-t6Q"/>
+                            <constraint firstItem="kCX-o4-0MO" firstAttribute="leading" secondItem="HoX-cu-Hsz" secondAttribute="leading" id="waV-99-duQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="4SX-tQ-Gte" id="08l-qJ-jPy"/>
+                        <outlet property="searchInfoTableView" destination="kCX-o4-0MO" id="P9z-yV-Fnv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q9-vx-gSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -37,4 +47,9 @@
             <point key="canvasLocation" x="-213" y="12"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

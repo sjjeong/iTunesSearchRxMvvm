@@ -43,8 +43,8 @@ extension DiContainer {
         self.container.register(SplashViewModel.self) { _ in
             SplashViewModel()
         }
-        self.container.register(SearchViewModel.self) { _ in
-            SearchViewModel()
+        self.container.register(SearchViewModel.self) { r in
+            SearchViewModel(apiService: r.resolve(ApiServiceType.self)!)
         }
     }
 }

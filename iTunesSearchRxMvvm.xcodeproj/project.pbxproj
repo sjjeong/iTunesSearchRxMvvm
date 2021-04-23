@@ -25,6 +25,8 @@
 		EEE360DE263040C800FFA0AC /* SearchInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360DD263040C800FFA0AC /* SearchInfoResponse.swift */; };
 		EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360E22630422300FFA0AC /* ApiServiceType.swift */; };
 		EEE360E62630425A00FFA0AC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360E52630425A00FFA0AC /* ApiService.swift */; };
+		EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */; };
+		EEE360EF263394B100FFA0AC /* SearchInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		EEE360DD263040C800FFA0AC /* SearchInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoResponse.swift; sourceTree = "<group>"; };
 		EEE360E22630422300FFA0AC /* ApiServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceType.swift; sourceTree = "<group>"; };
 		EEE360E52630425A00FFA0AC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoTableViewCell.swift; sourceTree = "<group>"; };
+		EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 				EEE36080262AF37200FFA0AC /* SearchViewController.swift */,
 				EEE36093262F277000FFA0AC /* SearchViewModel.swift */,
 				EEE36083262F196000FFA0AC /* Search.storyboard */,
+				EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */,
+				EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				EEE36038262AD50A00FFA0AC /* Assets.xcassets in Resources */,
 				EEE36084262F196100FFA0AC /* Search.storyboard in Resources */,
 				EEE36036262AD50800FFA0AC /* Splash.storyboard in Resources */,
+				EEE360EF263394B100FFA0AC /* SearchInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */,
+				EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */,
 				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
 				EEE36033262AD50700FFA0AC /* SplashViewController.swift in Sources */,
 				EEE3602F262AD50700FFA0AC /* AppDelegate.swift in Sources */,
