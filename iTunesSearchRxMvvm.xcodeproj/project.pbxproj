@@ -28,6 +28,7 @@
 		EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */; };
 		EEE360EF263394B100FFA0AC /* SearchInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */; };
 		EEE360FC26339CCA00FFA0AC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */; };
+		EEE361012633AF0400FFA0AC /* SearchInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE361002633AF0400FFA0AC /* SearchInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoTableViewCell.swift; sourceTree = "<group>"; };
 		EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchInfoTableViewCell.xib; sourceTree = "<group>"; };
 		EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		EEE361002633AF0400FFA0AC /* SearchInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				EEE360FA26339CB500FFA0AC /* extension */,
 				EEE3605D262AEA4B00FFA0AC /* di */,
 				EEE360D026303F3C00FFA0AC /* network */,
+				EEE360FF2633AEEE00FFA0AC /* model */,
 				EEE36071262AF26400FFA0AC /* ui */,
 				EEE3603C262AD50A00FFA0AC /* Info.plist */,
 			);
@@ -211,6 +214,14 @@
 				EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		EEE360FF2633AEEE00FFA0AC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EEE361002633AF0400FFA0AC /* SearchInfoModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 				EEE360FC26339CCA00FFA0AC /* UIImageView+Extension.swift in Sources */,
 				EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */,
 				EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */,
+				EEE361012633AF0400FFA0AC /* SearchInfoModel.swift in Sources */,
 				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
 				EEE36033262AD50700FFA0AC /* SplashViewController.swift in Sources */,
 				EEE3602F262AD50700FFA0AC /* AppDelegate.swift in Sources */,

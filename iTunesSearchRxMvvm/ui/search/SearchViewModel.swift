@@ -15,7 +15,7 @@ class SearchViewModel: BaseViewModel {
     
     let query: BehaviorRelay<String> = .init(value: "")
     
-    let searchInfoList: BehaviorRelay<[SearchInfoResponse]> = .init(value: [])
+    let searchInfoList: BehaviorRelay<[SearchInfoModel]> = .init(value: [])
     
     init(apiService: ApiServiceType) {
         self.apiService = apiService
@@ -29,6 +29,7 @@ class SearchViewModel: BaseViewModel {
                     .asObservable()
             }
             .map { $0.results }
+            .map { $0.map { $0.toPresentation() }}
             .bind(to: searchInfoList)
             .disposed(by: disposeBag)
     }

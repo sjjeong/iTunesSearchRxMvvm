@@ -23,8 +23,8 @@ class SearchInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func bind(_ item: SearchInfoResponse) {
-        trackImage.loadUrl(url: item.artworkUrl100)
+    func bind(_ item: SearchInfoModel) {
+        trackImage.loadUrl(url: item.imageUrl)
         artistLabel.text = item.artistName
         trackLabel.text = item.trackName
     }

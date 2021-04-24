@@ -36,7 +36,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     private func setupViewModelBind() {
         viewModel.searchInfoList
             .asDriver()
-            .drive(searchInfoTableView.rx.items(cellIdentifier: "SearchInfoTableViewCell")) { (index: Int, item: SearchInfoResponse, cell: SearchInfoTableViewCell) in
+            .drive(searchInfoTableView.rx.items(cellIdentifier: "SearchInfoTableViewCell")) { (index: Int, item: SearchInfoModel, cell: SearchInfoTableViewCell) in
                 cell.bind(item)
             }
             .disposed(by: disposeBag)
