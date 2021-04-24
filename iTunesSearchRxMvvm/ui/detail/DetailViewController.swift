@@ -24,26 +24,8 @@ final class DetailViewController: BaseViewController<DetailViewModel> {
     private func setupViewModelBind() {
         viewModel.searchInfo
             .map { $0.imageUrl }
-            .flatMap { imageUrl in
-                Observable.of(imageUrl, imageUrl.replacingOccurrences(of: "100x100", with: "200x200"))
-            }
-            .flatMap { imageUrl in
-                Observable.create { observer in
-                    guard let url = URL(string: imageUrl) else {
-                        return Disposables.create()
-                    }
-                    let imageResource = ImageResource(downloadURL: url)
-                    KingfisherManager.shared.retrieveImage(with: imageResource) { result in
-                        switch result {
-                        case .success(let value):
-                            observer.on(.next(value.image))
-                        case .failure(let error):
-                            observer.on(.error(error))
-                        }
-                    }
-                    return Disposables.create()
-                }
-            }
+            .flatMap { Observable.of($0, $0.replacingOccurrences(of: "100x100", with: "200x200")) }
+            .flatMap { $0.downloadImage() }
             .asDriver(onErrorDriveWith: Driver.empty())
             .drive(trackImageView.rx.image)
             .disposed(by: disposeBag)

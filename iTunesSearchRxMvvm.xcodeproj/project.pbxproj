@@ -32,6 +32,7 @@
 		EEE361072633B12800FFA0AC /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE361062633B12800FFA0AC /* Detail.storyboard */; };
 		EEE3610A2633B14F00FFA0AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE361092633B14F00FFA0AC /* DetailViewController.swift */; };
 		EEE361112633B16400FFA0AC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE361102633B16400FFA0AC /* DetailViewModel.swift */; };
+		EEE3611C2633C02000FFA0AC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE3611B2633C02000FFA0AC /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		EEE361062633B12800FFA0AC /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		EEE361092633B14F00FFA0AC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EEE361102633B16400FFA0AC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		EEE3611B2633C02000FFA0AC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */,
+				EEE3611B2633C02000FFA0AC /* String+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				EEE360FC26339CCA00FFA0AC /* UIImageView+Extension.swift in Sources */,
 				EEE3610A2633B14F00FFA0AC /* DetailViewController.swift in Sources */,
 				EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */,
+				EEE3611C2633C02000FFA0AC /* String+Extension.swift in Sources */,
 				EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */,
 				EEE361012633AF0400FFA0AC /* SearchInfoModel.swift in Sources */,
 				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
