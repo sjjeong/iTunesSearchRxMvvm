@@ -15,14 +15,24 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUi()
+        setupUiBind()
+        setupViewModelBind()
+    }
+    
+    private func setupUi() {
         searchInfoTableView.register(UINib(nibName: "SearchInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchInfoTableViewCell")
-        
+    }
+    
+    private func setupUiBind() {
         searchBar.rx
             .text
             .orEmpty
             .bind(to: viewModel.query)
             .disposed(by: disposeBag)
-        
+    }
+    
+    private func setupViewModelBind() {
         viewModel.searchInfoList
             .asDriver()
             .drive(searchInfoTableView.rx.items(cellIdentifier: "SearchInfoTableViewCell")) { (index: Int, item: SearchInfoResponse, cell: SearchInfoTableViewCell) in
