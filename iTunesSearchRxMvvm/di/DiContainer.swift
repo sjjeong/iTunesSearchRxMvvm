@@ -34,6 +34,12 @@ extension DiContainer {
                 $0.viewModel = r.resolve(SearchViewModel.self)
             }
         }
+        self.container.register(DetailViewController.self) { (r: Resolver, searchInfo: SearchInfoModel) in
+            let storyboard = UIStoryboard(name: "Detail", bundle: .main)
+            return (storyboard.instantiateInitialViewController() as! DetailViewController).then {
+                $0.viewModel = r.resolve(DetailViewModel.self, argument: searchInfo)
+            }
+        }
     }
 }
 
@@ -45,6 +51,9 @@ extension DiContainer {
         }
         self.container.register(SearchViewModel.self) { r in
             SearchViewModel(apiService: r.resolve(ApiServiceType.self)!)
+        }
+        self.container.register(DetailViewModel.self) { _, searchInfo in
+            DetailViewModel(searchInfo: searchInfo)
         }
     }
 }

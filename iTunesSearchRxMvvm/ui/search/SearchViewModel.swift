@@ -17,6 +17,8 @@ class SearchViewModel: BaseViewModel {
     
     let searchInfoList: BehaviorRelay<[SearchInfoModel]> = .init(value: [])
     
+    let showDetailEvent: PublishRelay<SearchInfoModel> = .init()
+    
     init(apiService: ApiServiceType) {
         self.apiService = apiService
     }
@@ -32,6 +34,11 @@ class SearchViewModel: BaseViewModel {
             .map { $0.map { $0.toPresentation() }}
             .bind(to: searchInfoList)
             .disposed(by: disposeBag)
+    }
+    
+    func onItemSelect(_ indexPath: IndexPath) {
+        let searchInfo = searchInfoList.value[indexPath.row]
+        showDetailEvent.accept(searchInfo)
     }
     
 }

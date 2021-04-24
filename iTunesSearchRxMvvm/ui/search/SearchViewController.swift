@@ -7,6 +7,7 @@
 
 import UIKit
 import RxCocoa
+import RxSwift
 
 class SearchViewController: BaseViewController<SearchViewModel> {
     
@@ -31,6 +32,13 @@ class SearchViewController: BaseViewController<SearchViewModel> {
             .orEmpty
             .bind(to: viewModel.query)
             .disposed(by: disposeBag)
+        searchInfoTableView.rx
+            .itemSelected
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.viewModel.onItemSelect($0)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setupViewModelBind() {
@@ -40,5 +48,16 @@ class SearchViewController: BaseViewController<SearchViewModel> {
                 cell.bind(item)
             }
             .disposed(by: disposeBag)
+        viewModel.showDetailEvent
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] item in
+                self?.showDetail(item)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func showDetail(_ searchInfo: SearchInfoModel) {
+        let vc = DiContainer.instance.container.resolve(DetailViewController.self, argument: searchInfo)!
+        present(vc, animated: true, completion: nil)
     }
 }
