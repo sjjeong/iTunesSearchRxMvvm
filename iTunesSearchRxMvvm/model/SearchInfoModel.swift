@@ -11,10 +11,16 @@ struct SearchInfoModel {
     let artistName: String
     let trackName: String
     let imageUrl: String
+    let previewUrl: String
 }
 
 extension SearchInfoResponse {
     func toPresentation() -> SearchInfoModel {
-        SearchInfoModel(artistName: artistName, trackName: trackName, imageUrl: artworkUrl100)
+        SearchInfoModel(
+            artistName: artistName,
+            trackName: trackName,
+            imageUrl: artworkUrl100,
+            previewUrl: previewUrl
+        )
     }
 }

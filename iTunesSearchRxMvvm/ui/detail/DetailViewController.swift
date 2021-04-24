@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 import RxCocoa
 import RxSwift
 import Kingfisher
@@ -15,6 +16,8 @@ final class DetailViewController: BaseViewController<DetailViewModel> {
     @IBOutlet weak var trackImageView: UIImageView!
     @IBOutlet weak var tradeNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
+  
+    let avPlayer: AVPlayer = AVPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,21 @@ final class DetailViewController: BaseViewController<DetailViewModel> {
             .asDriver(onErrorDriveWith: Driver.empty())
             .drive(artistNameLabel.rx.text)
             .disposed(by: disposeBag)
+        viewModel.searchInfo
+            .map { $0.previewUrl }
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] previewUrl in
+                self?.startPreview(previewUrl)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func startPreview(_ previewUrl: String) {
+        guard let url = URL(string: previewUrl) else { return }
+        
+        let avPlayerItem: AVPlayerItem = .init(url: url)
+        avPlayer.replaceCurrentItem(with: avPlayerItem)
+        avPlayer.play()
     }
     
 }
