@@ -16,8 +16,8 @@ final class DetailViewController: BaseViewController<DetailViewModel> {
     @IBOutlet weak var trackImageView: UIImageView!
     @IBOutlet weak var tradeNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
-  
-    let avPlayer: AVPlayer = AVPlayer()
+    
+    private var avPlayerLoop: AVPlayerLooper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +55,9 @@ final class DetailViewController: BaseViewController<DetailViewModel> {
         guard let url = URL(string: previewUrl) else { return }
         
         let avPlayerItem: AVPlayerItem = .init(url: url)
-        avPlayer.replaceCurrentItem(with: avPlayerItem)
+        let avPlayer = AVQueuePlayer(playerItem: avPlayerItem)
         avPlayer.play()
+        avPlayerLoop = AVPlayerLooper(player: avPlayer, templateItem: avPlayerItem)
     }
     
 }
