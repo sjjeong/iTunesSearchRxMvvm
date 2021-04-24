@@ -171,11 +171,10 @@
 		EEE3607F262AF36A00FFA0AC /* search */ = {
 			isa = PBXGroup;
 			children = (
+				EEE361042633B10200FFA0AC /* cell */,
 				EEE36080262AF37200FFA0AC /* SearchViewController.swift */,
 				EEE36093262F277000FFA0AC /* SearchViewModel.swift */,
 				EEE36083262F196000FFA0AC /* Search.storyboard */,
-				EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */,
-				EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -222,6 +221,15 @@
 				EEE361002633AF0400FFA0AC /* SearchInfoModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		EEE361042633B10200FFA0AC /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */,
+				EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
