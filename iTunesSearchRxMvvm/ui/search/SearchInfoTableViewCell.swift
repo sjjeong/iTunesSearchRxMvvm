@@ -9,6 +9,9 @@ import UIKit
 
 class SearchInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var trackImage: UIImageView!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var trackLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +24,9 @@ class SearchInfoTableViewCell: UITableViewCell {
     }
     
     func bind(_ item: SearchInfoResponse) {
-        print(item.trackName)
+        trackImage.loadUrl(url: item.artworkUrl100)
+        artistLabel.text = item.artistName
+        trackLabel.text = item.trackName
     }
     
 }

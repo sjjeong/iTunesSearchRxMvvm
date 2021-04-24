@@ -22,6 +22,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     
     private func setupUi() {
         searchInfoTableView.register(UINib(nibName: "SearchInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchInfoTableViewCell")
+        searchInfoTableView.tableFooterView = UIView()
     }
     
     private func setupUiBind() {

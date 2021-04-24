@@ -27,6 +27,7 @@
 		EEE360E62630425A00FFA0AC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360E52630425A00FFA0AC /* ApiService.swift */; };
 		EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */; };
 		EEE360EF263394B100FFA0AC /* SearchInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */; };
+		EEE360FC26339CCA00FFA0AC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		EEE360E52630425A00FFA0AC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		EEE360EC263394B100FFA0AC /* SearchInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInfoTableViewCell.swift; sourceTree = "<group>"; };
 		EEE360ED263394B100FFA0AC /* SearchInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchInfoTableViewCell.xib; sourceTree = "<group>"; };
+		EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				EEE3606F262AF25100FFA0AC /* application */,
 				EEE36074262AF29200FFA0AC /* assets */,
 				EEE36086262F246500FFA0AC /* base */,
+				EEE360FA26339CB500FFA0AC /* extension */,
 				EEE3605D262AEA4B00FFA0AC /* di */,
 				EEE360D026303F3C00FFA0AC /* network */,
 				EEE36071262AF26400FFA0AC /* ui */,
@@ -200,6 +203,14 @@
 				EEE360DD263040C800FFA0AC /* SearchInfoResponse.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		EEE360FA26339CB500FFA0AC /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				EEE360FB26339CCA00FFA0AC /* UIImageView+Extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE360FC26339CCA00FFA0AC /* UIImageView+Extension.swift in Sources */,
 				EEE360E32630422300FFA0AC /* ApiServiceType.swift in Sources */,
 				EEE360EE263394B100FFA0AC /* SearchInfoTableViewCell.swift in Sources */,
 				EEE36081262AF37200FFA0AC /* SearchViewController.swift in Sources */,
