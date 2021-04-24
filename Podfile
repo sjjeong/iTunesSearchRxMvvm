@@ -10,5 +10,6 @@ target 'iTunesSearchRxMvvm' do
   pod 'Then'
   pod 'Swinject'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end
