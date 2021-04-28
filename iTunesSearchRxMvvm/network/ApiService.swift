@@ -17,7 +17,7 @@ final class ApiService: ApiServiceType {
             AF.request(
                 url,
                 method: .get,
-                parameters: ["term":query, "country":"kr", "media":"music"])
+                parameters: ["term":query, "media":"music"])
                 .validate()
                 .responseDecodable(of: SearchResponse.self) { response in
                     switch response.result {
